@@ -1,0 +1,1 @@
+Live Volatility Trading System: A high-performance C++/Python automated system for trading equity derivatives. Implements Heston/SABR stochastic models for real-time volatility smile calibration. Features a low-latency execution engine and a robust pre-trade risk layer with automated kill-switches and dynamic position sizing to manage P&L.
