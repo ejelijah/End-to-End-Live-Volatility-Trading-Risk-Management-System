@@ -1,0 +1,3 @@
+/Users/elijahakpan/developer/quant/build/CMakeFiles/quant_core.dir
+/Users/elijahakpan/developer/quant/build/CMakeFiles/edit_cache.dir
+/Users/elijahakpan/developer/quant/build/CMakeFiles/rebuild_cache.dir
