@@ -14,6 +14,12 @@ PYBIND11_MODULE(quant_core, m) {
         .def("get_delta", &SABREngine::get_delta, 
              "Calculates Option Delta",
              py::arg("S"), py::arg("K"), py::arg("T"), py::arg("r"), py::arg("sigma"));
+            
+             py::class_<RiskController>(m, "RiskController")
+    .def(py::init<double, double>())
+    .def("is_trade_allowed", &RiskController::is_trade_allowed)
+    .def("trigger_emergency_stop", &RiskController::trigger_emergency_stop);
+
 }
 
 

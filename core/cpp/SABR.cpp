@@ -32,3 +32,25 @@ double SABREngine::get_delta(double S, double K, double T, double r, double sigm
     double d1 = (std::log(S / K) + (r + 0.5 * sigma * sigma) * T) / (sigma * std::sqrt(T));
     return 0.5 * (1.0 + std::erf(d1 / std::sqrt(2.0))); // Standard Normal CDF
 }
+RiskController::RiskController(double max_drawdown, double max_position_size)
+    : max_drawdown_(max_drawdown), max_position_size_(max_position_size) {}
+
+bool RiskController::is_trade_allowed(double current_pnl, double proposed_size) {
+    if (emergency_stop_active_) return false;
+    
+    // 1. Drawdown Check: If we've lost more than our limit, kill the bot
+    if (current_pnl < -max_drawdown_) {
+        trigger_emergency_stop();
+        return false;
+    }
+    
+    // 2. Position Limit Check
+    if (std::abs(proposed_size) > max_position_size_) return false;
+
+    return true;
+}
+
+void RiskController::trigger_emergency_stop() {
+    emergency_stop_active_ = true;
+    // In a real system, this would also send a "Cancel All" signal to the exchange
+}

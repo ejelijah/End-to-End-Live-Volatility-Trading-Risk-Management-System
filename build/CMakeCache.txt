@@ -411,6 +411,8 @@ _Python3_INCLUDE_DIR:INTERNAL=/Library/Frameworks/Python.framework/Versions/3.13
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;13;5;64;<none>;cpython-313-darwin;abi3;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=9e6912d89a4d0d3afbdf9e7744974145
+//Interpreter reason failure
+_Python3_Interpreter_REASON_FAILURE:INTERNAL=
 //Path to a library.
 _Python3_LIBRARY_RELEASE:INTERNAL=/Library/Frameworks/Python.framework/Versions/3.13/lib/libpython3.13.dylib
 //NumPy reason failure
