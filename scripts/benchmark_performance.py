@@ -10,7 +10,7 @@ from core.python.models.sabr import SABRModel # Your Python version
 alpha, beta, rho, volvol = 0.2, 0.5, -0.5, 0.3
 F, K, T = 228.5, 235.0, 1/365
 iterations = 10000
-print(f"Running {iterations} iterations for both Python and C++ implementations...")
+
 
 # 1. Benchmark Python
 py_model = SABRModel(alpha, beta, rho, volvol)
